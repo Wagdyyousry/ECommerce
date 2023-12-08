@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "224232053541",
+    "project_id": "ecommerce-c3545",
+    "storage_bucket": "ecommerce-c3545.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224232053541:android:759f3f7c075353e17bd8cc",
+        "android_client_info": {
+          "package_name": "com.wagdybuild.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoEqPxdQiemi1SonRdoYTy5JSUUSCRe9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

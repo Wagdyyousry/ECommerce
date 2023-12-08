@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.AddItemsFragment">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:background="@drawable/ic_arrow_back"
+        android:backgroundTint="@color/black" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dialog_select_layout_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="3dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="-100dp"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:orientation="vertical">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_item_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_image"
+                app:riv_border_color="@color/black"
+                app:riv_border_width="2dp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_itemImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="35dp"
+                android:minWidth="35dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="-30dp"
+                android:background="@drawable/btn_faded_and_corner_blue"
+                android:backgroundTint="#285C78"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Change picture" />
+        </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Choose Category"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="end"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <Spinner
+                android:id="@+id/spinner_select_category"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_margin="12dp"
+                android:background="@drawable/stroke_and_radius_blue"
+                android:entries="@array/Categories"
+                android:gravity="center"
+                android:popupBackground="#524C4C"
+                android:theme="@style/spinner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Item Name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/et_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/stroke_and_radius_blue"
+                android:drawablePadding="7dp"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#02322E"
+                android:textColorHint="#0A5F86"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/et_item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_and_radius_blue"
+                android:drawablePadding="7dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#02322E"
+                android:textColorHint="#0A5F86"
+                android:textSize="18sp"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Quantity    &amp;     price"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_item_quantity"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:autofillHints="no"
+                    android:hint="0"
+                    android:background="@drawable/stroke_and_radius_blue"
+                    android:gravity="center"
+                    android:textColorHint="@color/teal_700"
+                    android:inputType="number"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+                <EditText
+                    android:id="@+id/et_item_price"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:autofillHints="no"
+                    android:background="@drawable/stroke_and_radius_blue"
+                    android:hint="$"
+                    android:gravity="center"
+                    android:textColorHint="@color/teal_700"
+                    android:inputType="numberDecimal"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_item_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Discount"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/et_item_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/stroke_and_radius_blue"
+                android:drawablePadding="7dp"
+                android:layout_marginBottom="25dp"
+                android:hint="11%"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#02322E"
+                android:textColorHint="#0A5F86"
+                android:textSize="18sp" />
+
+           <!-- <TextView
+                android:id="@+id/tv_item_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Last for how long"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:visibility="visible"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/et_item_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:background="@drawable/stroke_and_radius_blue"
+                android:drawablePadding="7dp"
+                android:layout_marginBottom="25dp"
+                android:hint="11%"
+                android:gravity="center"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textColor="#02322E"
+                android:textColorHint="#0A5F86"
+                android:textSize="18sp" />-->
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_add_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:background="@drawable/btn_faded_and_corner_blue"
+        android:text="Add Item"
+        android:textColor="@color/white" />
+</LinearLayout>

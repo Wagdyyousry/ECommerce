@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Ecommerce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="Categories">
+
+        <item>Categories</item>
+
+        <item>Best Offer</item>
+
+        <item>Men</item>
+
+        <item>Women</item>
+
+        <item>Kids</item>
+
+        <item>Grocery</item>
+
+        <!--<item>Food</item>
+
+        <item>Fruit</item>
+
+        <item>Oil</item>
+
+        <item>Cleaning</item>-->
+
+    </string-array>
+</resources>

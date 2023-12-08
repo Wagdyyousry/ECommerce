@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_btn_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_btn_myProfile"
+        android:icon="@drawable/ic_person_black"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/nav_btn_myFavorites"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite" />
+
+    <item android:title="Actions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_btn_logOut"
+                    android:icon="@drawable/logout"
+                    android:title="Log Out" />
+                <item
+                    android:id="@+id/nav_btn_add_items"
+                    android:icon="@drawable/ic_settings"
+                    android:title="Add items" />
+                <!--<item
+                    android:id="@+id/nav_bar_switch"
+                    android:icon="@drawable/ic_dark_mode_black"
+                    android:title="@string/dark_mode"
+                    app:actionLayout="@layout/dark_mode_switch"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/menu_change_location"
+                    android:icon="@drawable/ic_location_black"
+                    android:title="@string/menu_change_location" />-->
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_btn_contact_with_us"
+                    android:icon="@drawable/ic_call"
+                    android:title="Contact with us" />
+
+            </group>
+        </menu>
+    </item>
+</menu>

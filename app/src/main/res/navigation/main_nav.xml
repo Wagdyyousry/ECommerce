@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/nav_home_to_item"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/nav_home_to_category"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/nav_home_to_addItems"
+            app:destination="@id/addItemsFragment" />
+        <action
+            android:id="@+id/nav_home_to_profile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/nav_home_to_women"
+            app:destination="@id/womenFragment" />
+        <action
+            android:id="@+id/nav_home_to_men"
+            app:destination="@id/menFragment" />
+        <action
+            android:id="@+id/nav_home_to_kids"
+            app:destination="@id/kidsFragment" />
+        <action
+            android:id="@+id/nav_home_to_groceries"
+            app:destination="@id/groceriesFragment" />
+        <action
+            android:id="@+id/nav_home_to_bestOffers"
+            app:destination="@id/bestOffersFragment" />
+        <action
+            android:id="@+id/nav_home_to_cart"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/nav_item_to_itself"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/nav_itemDetails_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_itemDetails_to_cart"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+    <fragment
+        android:id="@+id/trackOrderFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.TrackOrderFragment"
+        android:label="fragment_track_order"
+        tools:layout="@layout/fragment_track_order" />
+    <fragment
+        android:id="@+id/addItemsFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.AddItemsFragment"
+        android:label="fragment_add_items"
+        tools:layout="@layout/fragment_add_items" >
+        <action
+            android:id="@+id/nav_addItems_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/nav_profile_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/nav_cart_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_cart_to_itself"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bestOffersFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.BestOffersFragment"
+        android:label="fragment_best_offers"
+        tools:layout="@layout/fragment_best_offers" >
+        <action
+            android:id="@+id/nav_bestOffer_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_bestOffer_to_item"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groceriesFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.GroceriesFragment"
+        android:label="fragment_groceries"
+        tools:layout="@layout/fragment_groceries" >
+        <action
+            android:id="@+id/nav_grocery_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_grocery_to_item"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kidsFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.KidsFragment"
+        android:label="fragment_kids"
+        tools:layout="@layout/fragment_kids" >
+        <action
+            android:id="@+id/nav_kids_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_kids_to_item"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.MenFragment"
+        android:label="fragment_men"
+        tools:layout="@layout/fragment_men" >
+        <action
+            android:id="@+id/nav_men_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_men_to_item"
+            app:destination="@id/itemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/womenFragment"
+        android:name="com.wagdybuild.ecommerce.fragments.WomenFragment"
+        android:label="fragment_women"
+        tools:layout="@layout/fragment_women" >
+        <action
+            android:id="@+id/nav_women_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/nav_women_to_item"
+            app:destination="@id/itemFragment" />
+    </fragment>
+</navigation>

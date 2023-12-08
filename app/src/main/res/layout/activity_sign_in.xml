@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".views.SignInActivity">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/dialog_select_layout_file"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Enter your phone number"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic|bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/spinner_ccp"
+                    android:background="@drawable/stroke_and_radius_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:id="@+id/et_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:minHeight="48dp"
+                    android:minWidth="48dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/stroke_and_radius_blue"
+                    android:hint="Phone number"
+                    android:inputType="number"
+                    android:autofillHints="no"
+                    tools:ignore="TextFields" />
+
+            </LinearLayout>
+
+          <Button
+              android:id="@+id/btn_sign_in"
+              android:text="Sign In"
+              android:textColor="@color/white"
+              android:layout_marginTop="25dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginEnd="10dp"
+              android:background="@drawable/btn_faded_and_corner_blue"
+              android:layout_marginBottom="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
