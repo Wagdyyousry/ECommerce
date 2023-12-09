@@ -55,6 +55,7 @@ class MenItemsAdapter(
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var addToCartCount = 0
+        var addToCartCountForCloseBtn = 0
         val item = menItemList!![position]
 
         /** put Data in fields **/
@@ -69,10 +70,13 @@ class MenItemsAdapter(
         /** On buttons click **/
         holder.binding.btnAddToCartCardItem.setOnClickListener {
             addToCartCount++
-            if (addToCartCount == 1) {
+            addToCartCountForCloseBtn++
+            if (addToCartCountForCloseBtn == 1) {
                 holder.binding.btnAddToCartCardItem.setImageResource(R.drawable.ic_add)
                 holder.binding.btnMinusCardItem.visibility = View.VISIBLE
                 holder.binding.tvCountNumberCardItem.visibility = View.VISIBLE
+                holder.binding.btnHideCardItem.visibility = View.VISIBLE
+
             }
             holder.binding.tvCountNumberCardItem.text = addToCartCount.toString()
             selectedItemsList.add(item)
@@ -80,8 +84,17 @@ class MenItemsAdapter(
 
         }
 
-        holder.binding.btnMinusCardItem.setOnClickListener {
+        holder.binding.btnHideCardItem.setOnClickListener{
+            addToCartCountForCloseBtn = 0
+            holder.binding.btnMinusCardItem.visibility = View.INVISIBLE
+            holder.binding.tvCountNumberCardItem.visibility = View.INVISIBLE
+            holder.binding.btnHideCardItem.visibility = View.INVISIBLE
+            holder.binding.btnAddToCartCardItem.setImageResource(R.drawable.ic_add_cart)
 
+        }
+
+        holder.binding.btnMinusCardItem.setOnClickListener {
+            addToCartCountForCloseBtn--
             addToCartCount--
             holder.binding.tvCountNumberCardItem.text = addToCartCount.toString()
 
@@ -92,6 +105,8 @@ class MenItemsAdapter(
                 holder.binding.btnAddToCartCardItem.setImageResource(R.drawable.ic_add_cart)
                 holder.binding.btnMinusCardItem.visibility = View.INVISIBLE
                 holder.binding.tvCountNumberCardItem.visibility = View.INVISIBLE
+                holder.binding.btnHideCardItem.visibility = View.INVISIBLE
+
             }
 
 
